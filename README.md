@@ -8,7 +8,7 @@ A simple automated trading bot for Bitcoin built on the Alpaca API. It trains a 
    ```bash
    pip install -r requirements.txt
    ```
-2. Set the following environment variables with your credentials:
+2. Copy `.env.example` to `.env` and fill in your credentials:
    - `ALPACA_API_KEY`
    - `ALPACA_SECRET_KEY`
    - `ALPACA_BASE_URL` (optional, defaults to `https://api.alpaca.markets`)
@@ -25,5 +25,5 @@ The model automatically retrains every few trades or once per day.
 
 A common issue when starting the bot is receiving a `403` error from the
 Alpaca API. This usually means the API keys are missing or invalid. Ensure that
-`ALPACA_API_KEY` and `ALPACA_SECRET_KEY` are correctly set in your environment
-before running the bot.
+`ALPACA_API_KEY` and `ALPACA_SECRET_KEY` are correctly set in your `.env` file
+or environment before running the bot.

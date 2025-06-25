@@ -13,6 +13,9 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 
 import alpaca_trade_api as tradeapi
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # === Configuration ===
 API_KEY = os.getenv("ALPACA_API_KEY")

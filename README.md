@@ -8,9 +8,9 @@ A simple automated trading bot for Bitcoin built on the Alpaca API. It trains a 
    ```bash
    pip install -r requirements.txt
    ```
-2. Set the following environment variables with your credentials:
-   - `ALPACA_API_KEY`
-   - `ALPACA_SECRET_KEY`
+2. Set the following environment variables with your credentials (either pair works):
+   - `ALPACA_API_KEY` or `APCA_API_KEY_ID`
+   - `ALPACA_SECRET_KEY` or `APCA_API_SECRET_KEY`
    - `ALPACA_BASE_URL` (optional, defaults to `https://api.alpaca.markets`)
    - `BOT_EMAIL` and `BOT_EMAIL_PASSWORD` for notifications (optional)
    - `BOT_EMAIL_RECIPIENT` (optional)

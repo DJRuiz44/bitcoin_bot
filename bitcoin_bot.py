@@ -15,9 +15,15 @@ from sklearn.model_selection import train_test_split
 import alpaca_trade_api as tradeapi
 
 # === Configuration ===
-API_KEY = os.getenv("ALPACA_API_KEY")
-SECRET_KEY = os.getenv("ALPACA_SECRET_KEY")
-BASE_URL = os.getenv("ALPACA_BASE_URL", "https://api.alpaca.markets")
+API_KEY = os.getenv("ALPACA_API_KEY") or os.getenv("APCA_API_KEY_ID")
+SECRET_KEY = os.getenv("ALPACA_SECRET_KEY") or os.getenv("APCA_API_SECRET_KEY")
+BASE_URL = os.getenv("ALPACA_BASE_URL", os.getenv("APCA_API_BASE_URL", "https://api.alpaca.markets"))
+
+if not API_KEY or not SECRET_KEY:
+    raise ValueError(
+        "Alpaca API credentials not configured. Set ALPACA_API_KEY/APCA_API_KEY_ID "
+        "and ALPACA_SECRET_KEY/APCA_API_SECRET_KEY as environment variables."
+    )
 
 EMAIL_ADDRESS = os.getenv("BOT_EMAIL")
 EMAIL_PASSWORD = os.getenv("BOT_EMAIL_PASSWORD")

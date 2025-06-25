@@ -20,3 +20,10 @@ A simple automated trading bot for Bitcoin built on the Alpaca API. It trains a 
    ```
 
 The model automatically retrains every few trades or once per day.
+
+## Troubleshooting
+
+A common issue when starting the bot is receiving a `403` error from the
+Alpaca API. This usually means the API keys are missing or invalid. Ensure that
+`ALPACA_API_KEY` and `ALPACA_SECRET_KEY` are correctly set in your environment
+before running the bot.

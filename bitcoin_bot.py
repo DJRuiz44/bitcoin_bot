@@ -29,6 +29,9 @@ MODEL_PATH = "ai_model.pkl"
 
 FEATURES = ["returns", "sma_3", "sma_6", "sma_15", "stddev", "vol_chg"]
 
+if not API_KEY or not SECRET_KEY:
+    raise RuntimeError("ALPACA_API_KEY and ALPACA_SECRET_KEY must be set")
+
 api = tradeapi.REST(API_KEY, SECRET_KEY, BASE_URL, api_version="v2")
 
 
